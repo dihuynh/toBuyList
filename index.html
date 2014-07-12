@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <title>Di's to buy list</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/site.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h3 > 
+        Di's to buy list 
+        <a id="pop" rel="popover" data-placement="bottom" data-container="body" data-content="made with love, AngularJS & MixItUp" class="info"> about this site</a> 
+      </h3>
+      <div>
+        <p> feel free to buy any of these items for her</p>
+        <div class="totalAmount"> Total: <span id="amount"> $34,000</span></div>
+      </div>
+    </div>
+    <div  ng-controller="ItemsController">
+      <div class="controls">
+        <button class="btn btn-default filter" data-filter="all">all</button>
+        <button class="btn btn-default filter" data-filter=".category-{{type}}" ng-repeat="type in types">{{type}}</button>
+        <button class="btn btn-default sort" data-sort="myorder:asc">$ - $$$ </button>
+        <button class="btn btn-default sort" data-sort="myorder:desc"> $$$ - $</button>
+      </div>
+      <div class="test">
+        <div id="showing" class="mixContainer">
+          <div class="row">
+            <div class="mix {{item.bought}} category-{{item.type}}" data-myorder="{{item.price}}" ng-repeat="item in items">
+              <a ng-href="{{item.link}}">{{item.name}}
+                <img class="thumbnail" ng-src="{{item.img}}">
+                <div class="price"> {{item.price | currency}}</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <div class="container">
+      <p class="text-muted">&copy; 2014 by <a href="http://dihuynh.github.io"> Di Huynh</a>  and her dream of becoming a one-woman band software developer</p>
+    </div>
+  </div>
+
+</body>
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mixitup.js"></script>
+  <script type="text/javascript" src="js/angular-masonry.js"></script>
+  <script type="text/javascript" src="js/logic.js"></script>
+</html>
