@@ -39,7 +39,7 @@ app.controller('ItemsController',
       link: 'http://www.ebay.com/itm/Casio-PX700-Privia-Digital-88-Note-Weighted-Key-Piano-Free-Bench-MINT-COND-/281352867406?pt=Keyboards_MIDI&hash=item4181f00e4e', 
       type: 'music',
       img: 'images/weightedkeyboard.jpeg',        
-      bought: false       
+      bought: true     
     },{
       name: 'Roland HD-1',
       price: 699,
@@ -81,7 +81,7 @@ app.controller('ItemsController',
       link: 'http://www.amazon.com/Imprint-Comfort-Nantucket-20-Inch-Cinnamon/dp/B003BYRDK2/ref=sr_1_2?ie=UTF8&qid=1403827393&sr=8-2&keywords=standing+desk+mat',
       img: 'images/mat.jpg',
       type: 'office',
-      bought: false
+      bought: true
     }, {
       name: 'Yeti microphone',
       price: 99.93,
